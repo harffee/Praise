@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<Praise.Models.Detail>
+
+@foreach (var x in Model)
+{
+    <div>
+        <h3>@x.UpdateDate </h3>
+        @x.Name 'Praised' @x.ToWho
+        @x.Desc
+    </div>
+}
+    
+
+
+

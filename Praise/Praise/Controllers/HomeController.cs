@@ -12,14 +12,14 @@ namespace Praise.Controllers
     {
         private PraiseContext db = new PraiseContext();
         // update
+        
         public ActionResult Update()
         {
-            
-        var query = from b in db.Details
-                    orderby b.UpdateDate
-                    select b;
-        return View();
-    }
+            var query = from b in db.Details
+                        
+                        select b;
+            return View(query);
+        }
         
             
      }
