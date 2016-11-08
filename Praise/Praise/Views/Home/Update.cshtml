@@ -1,7 +1,8 @@
 ﻿
-@model IEnumerable<Praise.Models.Detail>
+@using Praise.Models
+ @model IList<Detail>
 
-@foreach (var x in Model)
+@foreach (Detail x in Model)
 {
     <div>
         <h3>@x.UpdateDate </h3>

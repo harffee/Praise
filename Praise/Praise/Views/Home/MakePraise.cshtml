@@ -1,0 +1,15 @@
+﻿@model Praise.Models.AccountInfo;
+@{
+    ViewBag.Title = "MakePraise";
+}
+
+<h2>Make Praise</h2>
+@using (Html.BeginForm())
+{
+    <div><label>To:</label>@Html.DropDownListFor(m => m.Name)</div>
+    <div><label>Reason:</label>@Html.EditorFor(m => m.Desc)</div>
+    <button type="submit">Submit</button>
+}
+
+
+

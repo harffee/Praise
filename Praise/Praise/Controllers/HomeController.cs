@@ -13,14 +13,16 @@ namespace Praise.Controllers
         private PraiseContext db = new PraiseContext();
         // update
         
-        public ActionResult Update()
+        public ActionResult Update(IList<Detail> details)
         {
-            var query = from b in db.Details
-                        
-                        select b;
-            return View(query);
+            details = details ?? new List<Detail>();
+            return View(details);
         }
         
+        public ActionResult MakePraise()
+        {
+            return View();
+        }
             
      }
 
