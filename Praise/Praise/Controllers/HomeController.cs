@@ -18,9 +18,18 @@ namespace Praise.Controllers
             details = details ?? new List<Detail>();
             return View(details);
         }
-        
+
         public ActionResult MakePraise()
         {
+            return View(new Detail());
+        }
+        [HttpPost]
+        public ActionResult MakePraise(IEnumerable<AccountInfo> accounts)
+        {
+            System.Data.DataTable dt = 
+            var accounts = from a in AccountInfo
+                            select a.Name;
+
             return View();
         }
             
