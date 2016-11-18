@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using Praise.Models;
+using Praise.DAL;
 
 namespace Praise.Controllers
 {
@@ -24,13 +25,11 @@ namespace Praise.Controllers
             return View(new Detail());
         }
         [HttpPost]
-        public ActionResult MakePraise(IEnumerable<AccountInfo> accounts)
+        public ActionResult MakePraise(PraiseContext())
         {
-            System.Data.DataTable dt = 
-            var accounts = from a in AccountInfo
-                            select a.Name;
-
-            return View();
+            //Step1:Take out all the name from 'AccountInfo'
+            private PraiseContext db1 = new PraiseContext();
+            return View(db1.Name.ToList());
         }
             
      }

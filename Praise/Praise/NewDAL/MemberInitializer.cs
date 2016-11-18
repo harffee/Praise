@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using Praise.DAL;
 using Praise.Models;
 
 namespace Praise.Models
@@ -19,7 +20,7 @@ namespace Praise.Models
             new AccountInfo{Name="Ketty Yu"}
             };
 
-            accounts.ForEach(s => context.AccountInfos.Add(s));
+            accounts.ForEach(s => context.Accounts.Add(s));
             context.SaveChanges();
 
             var details = new List<Detail>
@@ -32,6 +33,6 @@ namespace Praise.Models
             context.SaveChanges();
         }
 
-        
+
     }
 }
